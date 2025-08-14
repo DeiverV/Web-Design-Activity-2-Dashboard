@@ -2,6 +2,7 @@
 
 Un dashboard moderno y responsivo desarrollado con **HTML**, **CSS** y **JavaScript puro**.  
 Incluye un menú lateral colapsable, tarjetas con métricas y una tabla con scroll horizontal.
+Lo puedes visitar en: https://deiverv.github.io/Web-Design-Activity-2-Dashboard/ 
 
 ## 🚀 Características
 

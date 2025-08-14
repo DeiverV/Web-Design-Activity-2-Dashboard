@@ -132,7 +132,13 @@ body {
 }
 
 /* Cards */
-.cards {
+
+.cards h2 {
+  font-size: 1.5rem;
+  margin-bottom: 1rem;
+}
+
+.cards div {
   display: flex;
   gap: 1rem;
   margin-bottom: 2rem;
