@@ -37,7 +37,7 @@ project/
 1. Clona este repositorio:
 
 ```bash
-git clone https://github.com/DeiverV/umb-dashboard.git
+git clone https://github.com/DeiverV/Web-Design-Activity-2-Dashboard.git
 ````
 
 2. Abre el archivo `index.html` en tu navegador.
