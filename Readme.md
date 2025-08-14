@@ -2,6 +2,8 @@
 
 Un dashboard moderno y responsivo desarrollado con **HTML**, **CSS** y **JavaScript puro**.  
 Incluye un menú lateral colapsable, tarjetas con métricas y una tabla con scroll horizontal.
+
+Para las ver el responsive de la actividad revisalo en el ejemplo corriendo en vivo!
 Lo puedes visitar en: https://deiverv.github.io/Web-Design-Activity-2-Dashboard/ 
 
 ## 🚀 Características
@@ -35,7 +37,7 @@ project/
 1. Clona este repositorio:
 
 ```bash
-git clone https://github.com/tu-usuario/umb-dashboard.git
+git clone https://github.com/DeiverV/umb-dashboard.git
 ````
 
 2. Abre el archivo `index.html` en tu navegador.
