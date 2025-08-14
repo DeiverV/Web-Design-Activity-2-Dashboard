@@ -1,0 +1,249 @@
+:root {
+  --color-bg: #f4f7fb;
+  --color-primary: #991826;
+  --color-primary-dark: #8a1623;
+  --color-card: #ffffff;
+  --color-text: #2d3436;
+  --font-main: "Segoe UI", sans-serif;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: var(--font-main);
+  background-color: var(--color-bg);
+  color: var(--color-text);
+  width: 100vw;
+}
+
+.dashboard {
+  display: grid;
+  grid-template-areas:
+    "sidebar header"
+    "sidebar main"
+    "sidebar footer";
+  grid-template-columns: 240px 1fr;
+  grid-template-rows: 60px 1fr 40px;
+  height: 100vh;
+  transition: grid-template-columns 0.3s ease;
+}
+
+.dashboard.collapsed {
+  grid-template-columns: 60px 1fr;
+}
+
+/* Sidebar */
+.sidebar {
+  grid-area: sidebar;
+  background-color: var(--color-primary);
+  color: white;
+  padding: 1rem;
+  display: flex;
+  flex-direction: column;
+  transition: width 0.3s ease;
+  font-weight: 700;
+}
+
+.sidebar.collapsed {
+  width: 60px;
+}
+
+.sidebar.collapsed .menu-title {
+  display: none;
+}
+
+.sidebar-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.sidebar .menu-title {
+  font-size: 1.2rem;
+  white-space: nowrap;
+}
+
+#toggleSidebar {
+  background: none;
+  border: none;
+  color: white;
+  font-size: 1.4rem;
+  cursor: pointer;
+}
+
+.sidebar nav ul {
+  list-style: none;
+  margin-top: 1rem;
+}
+
+.sidebar nav ul li a {
+  display: flex;
+  gap: 5px;
+  align-items: center;
+
+  padding: 0.5rem 0;
+  color: white;
+  text-decoration: none;
+  border-radius: 6px;
+  transition: background 0.3s;
+}
+
+.sidebar.collapsed nav ul li a {
+  flex-direction: column;
+  justify-content: center;
+}
+
+.sidebar.collapsed nav ul li a span {
+  font-size: 10px;
+}
+
+.sidebar nav ul li a:hover {
+  background-color: var(--color-primary-dark);
+}
+
+/* Header */
+.header {
+  grid-area: header;
+  background: white;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 1rem;
+}
+
+.header input {
+  padding: 0.5rem;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+
+/* Main */
+.main {
+  grid-area: main;
+  padding: 1rem;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+}
+
+/* Cards */
+.cards {
+  display: flex;
+  gap: 1rem;
+  margin-bottom: 2rem;
+  flex-wrap: wrap;
+}
+
+.card {
+  background: var(--color-card);
+  flex: 1;
+  padding: 1rem;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+  transition: transform 0.3s, background 0.3s;
+  min-width: 200px;
+}
+
+.card:hover {
+  transform: translateY(-4px);
+  background: #f0f4f8;
+}
+
+/* Table */
+.table-section {
+  flex: 1;
+  overflow-x: auto;
+  overflow-y: hidden;
+  max-width: 100%;
+  height: fit-content;
+}
+
+/*Scroll*/
+*::-webkit-scrollbar {
+  width: 5px;
+  height: 5px;
+}
+
+*::-webkit-scrollbar-thumb {
+  background-color: #c27474;
+  border-radius: 5px;
+}
+
+*::-webkit-scrollbar-track {
+  background-color: #f1f1f1;
+}
+
+.table-section table {
+  height: fit-content;
+  min-width: 400px;
+  width: 100%;
+  border-collapse: collapse;
+  background: white;
+  border-radius: 10px;
+  margin-top: 15px;
+}
+
+.table-section th,
+.table-section td {
+  padding: 0.75rem;
+  border-bottom: 1px solid #ddd;
+  text-align: left;
+}
+
+.table-section th {
+  background-color: #f8f9fa;
+  font-weight: bold;
+}
+
+.footer {
+  grid-area: footer;
+  background: white;
+  text-align: center;
+  padding: 0.5rem;
+  font-size: 0.9rem;
+  border-top: 1px solid #ddd;
+}
+
+/* Responsividad */
+@media (max-width: 768px) {
+  .header h1 {
+    font-size: 1rem;
+  }
+
+  .header {
+    justify-content: center;
+    flex-direction: column;
+  }
+
+  .dashboard {
+    grid-template-columns: 60px 1fr;
+
+    grid-template-rows: 60px 1fr 40px;
+  }
+
+  .sidebar {
+    width: 60px;
+  }
+
+  .sidebar .menu-title {
+    display: none;
+  }
+
+  .sidebar nav ul li a {
+    flex-direction: column;
+    justify-content: center;
+  }
+
+  .sidebar nav ul li a span {
+    font-size: 10px;
+  }
+
+  #toggleSidebar {
+    display: none;
+  }
+}

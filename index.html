@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Dashboard UMB</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <div class="dashboard">
+      <!-- Sidebar -->
+      <aside class="sidebar" role="navigation">
+        <div class="sidebar-header">
+          <h2 class="menu-title">Menú UMB</h2>
+          <button id="toggleSidebar" aria-label="Toggle menu">☰</button>
+        </div>
+        <nav>
+          <ul>
+            <li>
+              <a href="#"
+                ><figure>🏠</figure>
+                <span>Inicio</span></a
+              >
+            </li>
+            <li>
+              <a href="#"
+                ><figure>📦</figure>
+                <span>Productos</span></a
+              >
+            </li>
+            <li>
+              <a href="#"
+                ><figure>🔧</figure>
+                <span>Config</span></a
+              >
+            </li>
+          </ul>
+        </nav>
+      </aside>
+
+      <!-- Header -->
+      <header class="header">
+        <h1>UMB Dashboard</h1>
+        <input type="search" placeholder="Buscar..." aria-label="Buscar" />
+      </header>
+
+      <!-- Main -->
+      <main class="main" role="main">
+        <section class="cards">
+          <article class="card">
+            <h3>Total Productos</h3>
+            <p>1,250</p>
+          </article>
+          <article class="card">
+            <h3>Ventas Hoy</h3>
+            <p>$3,450</p>
+          </article>
+          <article class="card">
+            <h3>Bajo Stock</h3>
+            <p>8</p>
+          </article>
+        </section>
+
+        <!-- Tabla -->
+        <section class="table-section">
+          <h2>Productos Recientes</h2>
+          <table>
+            <thead>
+              <tr>
+                <th>Producto</th>
+                <th>Categoría</th>
+                <th>Stock</th>
+                <th>Precio</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>Monitor 24"</td>
+                <td>Electrónica</td>
+                <td>15</td>
+                <td>$120</td>
+              </tr>
+              <tr>
+                <td>Mouse Gamer</td>
+                <td>Accesorios</td>
+                <td>40</td>
+                <td>$25</td>
+              </tr>
+            </tbody>
+          </table>
+        </section>
+      </main>
+
+      <!-- Footer -->
+      <footer class="footer">
+        <p>© 2025 Dashboard UMB Deiber Verano</p>
+      </footer>
+    </div>
+
+    <script>
+      const toggleBtn = document.getElementById("toggleSidebar");
+      const sidebar = document.querySelector(".sidebar");
+      const dashboard = document.querySelector(".dashboard");
+
+      toggleBtn.addEventListener("click", () => {
+        sidebar.classList.toggle("collapsed");
+      });
+      toggleBtn.addEventListener("click", () => {
+        dashboard.classList.toggle("collapsed");
+      });
+    </script>
+  </body>
+</html>
